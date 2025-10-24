@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Kumar+One&family=Marko+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav-grid">
+    <div class="brand box" id="brand">MY PORTFOLIO</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <ul id="nav-links" class="box">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">ABOUT</a></li>
+      <li><a href="#">CONTACT US</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Container with Grid -->
+  <div class="container box">
+    <div class="portrait box">
+      <img src="mypicture.jpg" alt="Profile">
+    </div>
+    <div class="intro box">
+      <div class="hello box">HELLO IT'S ME</div>
+      <div class="name box">WENGELINE D. PALUMAR</div>
+      <div class="degree box">BS INFORMATION TECHNOLOGY STUDENT</div>
+    </div>
+  </div>
+
+  <script>
+    // Toggle hamburger menu
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    const brand = document.getElementById('brand');
+
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      toggle.classList.toggle('open');
+    });
+
+    // Rotate "MY PORTFOLIO" when clicked
+    brand.addEventListener('click', () => {
+      brand.classList.add('spin');
+      setTimeout(() => brand.classList.remove('spin'), 1000);
+    });
+  </script>
+
+</body>
+</html>
