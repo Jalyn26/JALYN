@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - MY PORTFOLIO</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Kumar+One&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <div class="nav-container">
+    <div class="nav-grid">
+      <div class="brand">MY PORTFOLIO</div>
+
+      <!-- Hamburger menu -->
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+      <ul id="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html" class="active">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about-container">
+    <h1>About Me</h1>
+
+    <div class="about-text">
+
+      <!-- WHO I AM BOX -->
+      <div class="about-box">
+        <h2>Who I Am?</h2>
+        <p>
+          Hi, my name is Wengeline Palumar. I am a creative and motivated individual who enjoys learning new things, taking on challenges, and expressing myself through my work.
+        </p>
+      </div>
+
+      <!-- MY GOALS BOX -->
+      <div class="about-box">
+        <h2>My Goals</h2>
+        <p>
+          My journey to success is fueled by curiosity, hard work, and determination. Every challenge is a lesson, and every opportunity helps me grow toward achieving my goals.
+        </p>
+      </div>
+
+      <!-- SKILLS BOX -->
+      <div class="skills-box">
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML & CSS</li>
+          <li>JavaScript</li>
+          <li>PHP & MySQL</li>
+          <li>Git/GitHub</li>
+          <li>Responsive Web Design</li>
+        </ul>
+      </div>
+
+      <!-- PROJECTS BOX -->
+      <div class="projects-box">
+        <h2>Projects</h2>
+        <ul>
+          <li>Portfolio Website</li>
+          <li>Water Billing System</li>
+          <li>PLDT Billing System</li>
+          <li>GCASH Record Management</li>
+          <li>Evergreen Learning Institute System</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== JS for Hamburger ===== -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuToggle.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
