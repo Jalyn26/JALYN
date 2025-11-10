@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Kumar+One&display=swap');
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BACKGROUND & BODY */
+body {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('background1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Aclonica', sans-serif;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ===== NAVIGATION ===== */
+.nav-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(86, 196, 250, 0.6);
+  border-radius: 25px;
+  box-shadow: 0 0 25px rgba(86, 196, 250, 0.3);
+  backdrop-filter: blur(10px);
+  transition: 0.4s ease;
+}
+
+.nav-container:hover {
+  box-shadow: 0 0 35px rgba(86, 196, 250, 0.6);
+  transform: scale(1.01);
+}
+
+.nav-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: relative;
+}
+
+.brand {
+  font-family: 'Marko One', serif;
+  font-size: 32px;
+  color: #56c4fa;
+  cursor: pointer;
+  transition: transform 1s ease;
+}
+
+.brand:hover {
+  transform: rotate(360deg);
+}
+
+/* Hamburger menu */
+.menu-toggle {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: #56c4fa;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle.open {
+  transform: rotate(90deg);
+}
+
+/* Nav links */
+#nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+#nav-links li a {
+  text-decoration: none;
+  font-family: 'Marko One', serif;
+  font-weight: bold;
+  color: #fff;
+  font-size: 24px;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.05);
+  border: 2px solid transparent;
+  transition: 0.4s;
+}
+
+#nav-links li a:hover,
+#nav-links li a.active {
+  color: #56c4fa;
+  border-color: #56c4fa;
+  box-shadow: 0 0 15px rgba(86, 196, 250, 0.4);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* ===== ABOUT SECTION ===== */
+.about-container {
+  padding: 60px 80px;
+  text-align: center;
+}
+
+.about-container h1 {
+  font-family: 'Marko One', serif;
+  font-size: 40px;
+  margin-bottom: 40px;
+  color: #56c4fa;
+}
+
+/* ABOUT TEXT CONTAINERS */
+.about-text {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* INDIVIDUAL BOXES */
+.about-box,
+.skills-box,
+.projects-box {
+  background: rgba(0,0,0,0.45);
+  border: 2px solid #56c4fa;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(86, 196, 250, 0.3);
+  flex: 1 1 45%;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* HEADINGS */
+.about-box h2,
+.skills-box h2,
+.projects-box h2 {
+  font-family: 'Kumar One', cursive;
+  color: #56c4fa;
+  margin-bottom: 15px;
+}
+
+/* PARAGRAPHS & LISTS */
+.about-box p {
+  font-family: 'Aclonica', sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #f0f0f0;
+  letter-spacing: 0.5px;
+  background: rgba(255,255,255,0.08);
+  border: 2px solid #56c4fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(86,196,250,0.3);
+  margin-bottom: 0;
+}
+
+.skills-box ul,
+.projects-box ul {
+  padding-left: 30px;
+  list-style-type: disc;
+  margin: 0;
+}
+
+.skills-box li,
+.projects-box li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .about-text {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-box,
+  .skills-box,
+  .projects-box {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+}
+
+/* Small screens - Hamburger activates */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    list-style: none;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+
+  #nav-links li a {
+    color: #000;
+    font-size: 22px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .about-container {
+    padding: 30px 20px;
+  }
+
+  #nav-links li a {
+    font-size: 20px;
+  }
+}

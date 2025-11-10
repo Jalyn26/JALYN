@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Kumar+One&family=Marko+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY & BACKGROUND ===== */
+body {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  url('background1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Aclonica', sans-serif;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ===== NAVIGATION CONTAINER ===== */
+.nav-container {
+  width: 90%;
+  margin: 25px auto;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(86, 196, 250, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  backdrop-filter: blur(8px);
+}
+
+/* ===== NAVIGATION ===== */
+.nav-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: relative;
+}
+
+.brand {
+  font-family: 'Kumar One', cursive;
+  font-size: 30px;
+  color: #56c4fa;
+  text-shadow: 0 0 10px rgba(86, 196, 250, 0.6);
+}
+
+/* Hamburger icon */
+.menu-toggle {
+  display: none;
+  font-size: 32px;
+  color: #56c4fa;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle.open {
+  transform: rotate(90deg);
+}
+
+/* Navigation links */
+#nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+#nav-links li a {
+  text-decoration: none;
+  font-family: 'Kumar One', cursive;
+  color: #000;
+  font-size: 22px;
+  background: #fff;
+  padding: 8px 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(255,255,255,0.2);
+}
+
+#nav-links li a:hover,
+#nav-links li a.active {
+  background: #56c4fa;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-container {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-container h1 {
+  font-family: 'Marko One', serif;
+  font-size: 40px;
+  color: #56c4fa;
+  margin-bottom: 15px;
+}
+
+.contact-container p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* ===== SOCIAL LINKS ===== */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 30px;
+  border-radius: 15px;
+  width: 320px;
+  justify-content: center;
+  font-family: 'Aclonica', sans-serif;
+  transition: 0.3s;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+/* Brand Gradients */
+.social-links a.email { background: linear-gradient(135deg, #D44638, #BA3C31); }
+.social-links a.facebook { background: linear-gradient(135deg, #1877F2, #145DBF); }
+.social-links a.instagram { background: linear-gradient(135deg, #F58529, #DD2A7B, #8134AF, #515BD4); }
+.social-links a.phone { background: linear-gradient(135deg, #34B7F1, #0A8BCE); }
+.social-links a.github { background: linear-gradient(135deg, #333, #555); }
+
+/* Hover Effects */
+.social-links a:hover {
+  transform: scale(1.05);
+}
+
+.social-links a i {
+  font-size: 24px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Large tablets and small laptops */
+@media (max-width: 1024px) {
+  .nav-container {
+    width: 95%;
+  }
+
+  #nav-links li a {
+    font-size: 20px;
+    padding: 6px 12px;
+  }
+
+  .contact-container h1 {
+    font-size: 35px;
+  }
+}
+
+/* Tablets and smaller screens */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    right: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    gap: 15px;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+
+  #nav-links li a {
+    background: transparent;
+    color: #000;
+    font-size: 20px;
+    box-shadow: none;
+    border: 2px solid #56c4fa;
+  }
+
+  #nav-links li a:hover {
+    background: #56c4fa;
+    color: #fff;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .contact-container h1 {
+    font-size: 30px;
+  }
+
+  .social-links a {
+    width: 90%;
+    font-size: 18px;
+    padding: 15px 20px;
+  }
+
+  #nav-links li a {
+    font-size: 18px;
+  }
+}
